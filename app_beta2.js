@@ -5856,6 +5856,13 @@ function append_files_to_list(path, files) {
                 </button>
               </div>
 	        </li>`;
+	    } else {
+      switch(item.name) { // 隱藏項目
+				case 'README.md':
+					continue
+				case 'HEAD.md':
+					continue
+			}
     } else {
       var p = path + encodeURIComponent(item.name).replaceAll("%5C", "%5C%5C").replace(/[!'()*]/g, escape);	// Adding file name to url
       var ddl_link = p;
